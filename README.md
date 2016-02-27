@@ -16,11 +16,11 @@ Building this project requires [Maven 3](https://maven.apache.org/download.cgi) 
 ```console
 mvn package
 ```
-This will generate a JAR file at `./target/resolution.jar`
+This will generate a JAR file at `./target/anivarthi-djbeckwith-bnet.jar`
 
 ## Execution
 Running this program requires [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html). To run the JAR file, execute the following command:
 ```console
-java -jar anivarthi-djbeckwith-bnet.jar
+java -jar anivarthi-djbeckwith-bnet.jar network_file query_file
 ```
-This will cause the program to show its usage and help message.
+Where `network_file` is a path to a file containing information about the Bayesian Network and `query_file` is a path to a file containing the query information.
