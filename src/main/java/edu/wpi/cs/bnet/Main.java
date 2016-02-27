@@ -4,12 +4,26 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * This class runs the program
+ *
+ * @author Daniel Beckwith, Aditya Nivarthi
+ */
 public class Main {
 
+    /**
+     * Main method.
+     *
+     * @param args Command line arguments.
+     * @throws IOException Bad file format
+     */
     public static void main(String[] args) throws IOException {
         String nodeFile = args[0];
+
+        // Read network file and set up network
         BNet bNet = new BNet(new FileInputStream(nodeFile));
 
+        // Read query file and set up network
         {
             String queryFile = args[1];
             Scanner scanner = new Scanner(new FileInputStream(queryFile));
@@ -33,6 +47,7 @@ public class Main {
 
         int samples = Integer.parseInt(args[2]);
 
+        // Output
         System.out.println("Rejection Sampling");
         System.out.format("Probability of %s with %,d samples: %f%n", bNet.getQueryNode().getName(), samples, bNet.rejectionSampling(samples));
 
