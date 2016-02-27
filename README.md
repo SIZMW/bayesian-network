@@ -8,6 +8,9 @@ Authors:
 ## Purpose
 The purpose of this project was to create a Bayesian network and test various sampling methods on it.
 
+## Implementation
+We implemented option B for this project, where the number of parents is not limited at two parents for a node.
+
 ## Building
 Building this project requires [Maven 3](https://maven.apache.org/download.cgi) and [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). To build a standalone executable JAR file, run the following command from the project root directory:
 ```console
